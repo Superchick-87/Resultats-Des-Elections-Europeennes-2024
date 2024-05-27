@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+header{
+	text-align: center;
+
+}
+
+div{
+	word-wrap: break-word;
+}
+p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	margin: 0 auto;
+	color: rgb(0, 0, 0);
+	font-weight: 300;
+}
+.decalgauche{
+	margin-left: 50px;
+}
+.decaldroite{
+	margin-right: 50px;
+}
+
+
+.tick{
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+}
+.legende{
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	margin-right:5px;
+	
+}
+/*/////////////////////////////////////////////////////////////*/
+
+
+div.tooltip {
+	color: white;
+	position: absolute;
+	text-align: left;
+	padding: 7px;
+	font-family: 'Roboto', sans-serif;
+	font: 15px;
+	font-weight: 300;
+	background: rgba(0,0,0,.9);
+	border-radius: 3px;
+	pointer-events: none;
+}
+.tooltiptitre{
+	font-size: 23px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+}
+.tooltippuce{
+	display:inline-block;
+	margin-right:4px;
+	margin-top:10px;
+	width:18px;
+	height:13px;
+}
+.puce{
+	display: inline-block;
+	border:1px solid white;
+	margin:5px 8px 0 0;
+	height:15px; 
+}
+/*.code0{
+	background-color:white;
+}*/
+
+.code3{background-color:#404040;}
+.code4{background-color:#cc2443;}
+.code5{background-color:#404040;}
+.code6{background-color:#00c000;}
+.code11{background-color:#ffe207;}
+.code18{background-color:#0066CC;}
+.code27{background-color:#ff9eb4;}
+.code33{background-color:#cc2443;}
+.code50{background-color:#c8c8c8;}
+
+.tooltipinfosupp{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+.pourcentages{
+	display: inline-block;
+	height:23px;
+	vertical-align:middle;
+}
+.abstention{
+	background-color:white;
+}
+.nomcandidat{
+	margin-top: 3px;
+}
+
+/*/////////////////////////////////////////////////////////////*/
+
+h3{
+	font-size: 20px;
+	margin: 0 0 7px 0;
+}
+.interlignebas{
+	margin-bottom: 0px;
+}
+.interlignehaut{
+	margin-top: 0px;
+}
+legend{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: rgba(0,0,0,0.7);
+	margin: 0 auto;
+}
+.legendrond{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	margin: 0 auto;
+}
+select{
+    font-size: 15px;
+    width:150px;
+    height: 32px;
+    text-align: center !important;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 5px;
+    margin: 7px 15px 5px 15px;
+}
+input{
+    width:150px;
+    height: 25px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 7px 15px 5px 15px;
+}
+
+
+ #alerte{
+	font-size: 20px;
+	margin-bottom: 20px;
+ }
+
+#parcours {
+	width: 60%;
+}
+ #moyenneauto, #moyennemoto, #moyennesfrauto, #moyennesfrmoto{
+	text-align: left;
+	margin:0 auto;
+	width: 90%;	
+	margin-top: 10px;
+ }
+.infosupp{
+	font-size: 17px;
+	line-height: 22px;
+	margin-top: 10px;
+}
+.villesparcours{
+	font-size: 17px;
+	line-height: 20px;
+	margin-top: 10px;
+	fill:#B3B3B3;
+}
+.prix{
+	font-size: 45px;
+	line-height: 1em;
+}
+.pourcentage{
+	font-size: 35px;
+	line-height: 1.4em;
+}
+.visu2{
+	width: 300px;
+	height: 180px;
+	position: relative;
+	margin: 20px 20px auto 0;	
+}
+.visu{
+	height:auto;
+	width:300px;
+}
+
+.textvaleurg{
+	margin-top: 10px;
+	font-size: 37px;
+	color: #d42e1a;
+	line-height: 45px;
+	font-family: 'Oswald', sans-serif;
+	text-align: left;
+}
+.textvaleurd{
+	margin-top: 10px;
+	font-size: 37px;
+	color: #d42e1a;
+	line-height: 45px;
+	font-family: 'Oswald', sans-serif;
+	text-align: right;
+}
+.flexprix{
+	display: flex;
+	justify-content: center;
+}
+.tarifsfond{
+	width: 110px;
+	height: 110px;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.8);
+	border: 2px;
+	margin: 20px;
+	font-size: 30px;
+	vertical-align: center;
+}
+.intitule{
+	margin-left: 5px;
+	font-size: 18px;
+}
+.titre{
+	word-wrap: break-word;
+	width: 100%;
+	text-align: center;
+}
+
