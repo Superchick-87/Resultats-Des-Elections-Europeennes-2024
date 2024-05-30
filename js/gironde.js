@@ -4,6 +4,7 @@
 function entete(){
 	var promises = [
 			d3.json('js/maps/departements/communes-33-gironde.geojson'),
+			
 			d3.csv('datas/Euro2019Communes.csv')
 		]
 	
