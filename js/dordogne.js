@@ -55,7 +55,7 @@ function entete(){
 
 			var areaScale = d3.scaleQuantile()
 			.domain([3,4,5,6,11,18,27,33,50])
-				.range(["#404040","#cc2443","#404040","#00c000","#ffe207","#0066CC","#ff9eb4","#cc2443","#c8c8c8"]);
+				.range(["#333333","#B51F1F","#333333","#00c000","#ffe207","#0066CC","#ff9eb4","#B51F1F","#c8c8c8"]);
 
  			var svg = d3.select("svg"),
 				width = +svg.attr("width"),
@@ -222,7 +222,7 @@ function Labstention(){
 
 			var areaScale = d3.scaleLinear()
 				.domain([min*1.3,max])
-				.range(['white','#2D1500']);
+				.range(['white','#47746C']);
  //CARTE
 			d3.select('svg#Labstention')
 				.attr("preserveAspectRatio","xMinYMin meet")
@@ -287,7 +287,7 @@ function Labstention(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,10,100])
-			    .range(['white','#2D1500']);
+			    .range(['white','#47746C']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
@@ -351,7 +351,7 @@ function RassemblementNational(){
 
 			var areaScale = d3.scaleLinear()
 				.domain([min*1.3,max])
-				.range(['white','#1E0077']);
+				.range(['white','#333333']);
  //CARTE
 			d3.select('svg#RassemblementNational')
 				.attr("preserveAspectRatio", "xMinYMin meet")
@@ -416,7 +416,7 @@ function RassemblementNational(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,10,40])
-			    .range(['white','#1E0077']);
+			    .range(['white','#333333']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
@@ -479,7 +479,7 @@ function LaRepubliqueEnMarche(){
 
 			var areaScale = d3.scaleLinear()
 				.domain([min*1.3,max])
-				.range(['white','#ffe207']);
+				.range(['white','#FBBA00']);
  //CARTE
 			d3.select('svg#BesoinDeurope')
 				.attr("preserveAspectRatio", "xMinYMin meet")
@@ -544,7 +544,7 @@ function LaRepubliqueEnMarche(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,10,40])
-			    .range(['white','#ffe207']);
+			    .range(['white','#FBBA00']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
@@ -607,7 +607,7 @@ function LesRepublicains(){
 
 			var areaScale = d3.scaleLinear()
 				.domain([min*1.3,max])
-				.range(['white','#0040FF']);
+				.range(['white','#0091D8']);
  //CARTE
 			d3.select('svg#LesRepublicains')
 				.attr("preserveAspectRatio","xMinYMin meet")
@@ -672,7 +672,7 @@ function LesRepublicains(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,8,30])
-			    .range(['white','#0040FF']);
+			    .range(['white','#0091D8']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
@@ -800,7 +800,7 @@ function EuropeEcologie(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,10,40])
-			    .range(['white','#A5DF00']);
+			    .range(['white','#AFCA0B']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
@@ -863,7 +863,7 @@ function FranceInsoumise(){
 
 			var areaScale = d3.scaleLinear()
 				.domain([min*1.3,max])
-				.range(['white','#FE2E2E']);
+				.range(['white','#B51F1F']);
  //CARTE
 			d3.select('svg#FranceInsoumise')
 				.attr("preserveAspectRatio", "xMinYMin meet")
@@ -928,7 +928,7 @@ function FranceInsoumise(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,10,40])
-			    .range(['white','#FE2E2E']);
+			    .range(['white','#B51F1F']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
@@ -991,7 +991,7 @@ function PartiSocialiste(){
 
 			var areaScale = d3.scaleLinear()
 				.domain([min*1.3,max])
-				.range(['white','#FE2EC8']);
+				.range(['white','#ED6EA7']);
  //CARTE
 			d3.select('svg#PartiSocialistePlacePublique')
 				.attr("preserveAspectRatio", "xMinYMin meet")
@@ -1056,7 +1056,7 @@ function PartiSocialiste(){
  //COLORBAR
 			var colors = d3.scaleLinear()
 			   	.domain([0,10,40])
-			    .range(['white','#FE2EC8']);
+			    .range(['white','#ED6EA7']);
 
 		     var legend = svg.append('g')
                 .attr('transform', 'translate(40, 10)')
