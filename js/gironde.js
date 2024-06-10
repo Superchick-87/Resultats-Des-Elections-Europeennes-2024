@@ -71,6 +71,20 @@ function entete() {
 			.on("zoom", zoomed);
 
 		//CARTE
+		function egual(x, y,z,a) {
+			if (x == y & (z == 5 && a == 11)) {
+				return 'hach_orange';
+			}
+			if (x == y & (z == 5 && a == 27)) {
+				return 'hach_rose';
+			}
+			if (x == y ) {
+				return 'blue';
+			}
+			else{
+				return 'none'
+			}
+		}
 		var carte = d3.select('svg#entete')
 			.append('g')
 			.attr('id', 'carte')
@@ -81,6 +95,18 @@ function entete() {
 			.attr('d', geoPath)
 			.attr('cursor', 'pointer')
 			.style('fill', d => areaScale(d.properties.Code1))
+			// var carte2 = d3.select('svg#entete')
+			// .append('g')
+			// .attr('id', 'carte')
+			// .selectAll('path')
+			// .data(data.features)
+			// .enter()
+			// .append('path')
+			// .attr('d', geoPath)
+			// .attr('cursor', 'pointer')
+			// .attr('class',d =>  egual(d.properties.Pourcentage1,d.properties.Pourcentage2,d.properties.Code1,d.properties.Code2))
+			// // .style('fill', d => areaScale(d.properties.Code1,d.properties.Code2))
+		
 			.on('mouseover', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', true)
 				div
@@ -268,17 +294,17 @@ function Labstention() {
 					.style('left', d3.event.pageX - 28 + 'px')
 					.style('top', d3.event.pageY - 28 + 'px');
 					
-					var toto = document.getElementById('tooltipAbs');
-					var largeur = top.innerWidth;
-					console.log(toto.offsetLeft)
-					if (toto.offsetLeft > largeur / 2) {
-						toto.style.left = toto.offsetLeft *0.55+ "px";
-						toto.style.top = toto.offsetTop + "px";
-					}
-					else {
-						toto.style.left = toto.offsetLeft + 24 + "px";
-						toto.style.top = toto.offsetTop + 30 + "px";
-					}
+					// var toto = document.getElementById('tooltipAbs');
+					// var largeur = top.innerWidth;
+					// console.log(toto.offsetLeft)
+					// if (toto.offsetLeft > largeur / 2) {
+					// 	toto.style.left = toto.offsetLeft *0.55+ "px";
+					// 	toto.style.top = toto.offsetTop + "px";
+					// }
+					// else {
+					// 	toto.style.left = toto.offsetLeft + 24 + "px";
+					// 	toto.style.top = toto.offsetTop + 30 + "px";
+					// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -338,7 +364,7 @@ function Labstention() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('id','tooltipAbs')
+			.attr('id','tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -408,20 +434,23 @@ function RassemblementNational() {
 					.html('<span class="tooltiptitre">' + d.properties.name + '</span><br/>'
 						+ '<span>Score : ' + d.properties.RNExp + '%</span>')
 
-						.style('left', d3.event.pageX - 28 + 'px')
-						.style('top', d3.event.pageY - 28 + 'px');
+						.style('left', d3.event.pageX + 'px')
+					.style('top', d3.event.pageY - 28 + 'px');
 						
-						var toto = document.getElementById('tooltipRn');
-						var largeur = top.innerWidth;
-						console.log(toto.offsetLeft)
-						if (toto.offsetLeft > largeur / 2) {
-							toto.style.left = toto.offsetLeft *0.55+ "px";
-							toto.style.top = toto.offsetTop + "px";
-						}
-						else {
-							toto.style.left = toto.offsetLeft + 24 + "px";
-							toto.style.top = toto.offsetTop + 30 + "px";
-						}
+			// 			var toto = document.getElementById('tooltipRn');
+			// 			var largeur = top.innerWidth;
+			// 			console.log(toto.offsetLeft)
+						
+							
+			// 				if (toto.offsetLeft > largeur / 2) {
+			// 					toto.style.left = toto.offsetLeft *0.55+ "px";
+			// 				toto.style.top = toto.offsetTop + "px";
+			// 			}
+			// 		else {
+			// 			toto.style.left = toto.offsetLeft + 24 + "px";
+			// 		toto.style.top = toto.offsetTop + 30 + "px";
+				
+			// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -480,7 +509,7 @@ function RassemblementNational() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('id', 'tooltipRn')
+			.attr('id', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -549,20 +578,20 @@ function LaRepubliqueEnMarche() {
 					.html('<span class="tooltiptitre">' + d.properties.name + '</span><br/>'
 						+ '<span>Score : ' + d.properties.LREMExp + '%</span>')
 
-						.style('left', d3.event.pageX - 28 + 'px')
-						.style('top', d3.event.pageY - 28 + 'px');
+						.style('left', d3.event.pageX + 'px')
+					.style('top', d3.event.pageY - 28 + 'px');
 						
-						var toto = document.getElementById('tooltipRem');
-						var largeur = top.innerWidth;
-						console.log(toto.offsetLeft)
-						if (toto.offsetLeft > largeur / 2) {
-							toto.style.left = toto.offsetLeft *0.55+ "px";
-							toto.style.top = toto.offsetTop + "px";
-						}
-						else {
-							toto.style.left = toto.offsetLeft + 24 + "px";
-							toto.style.top = toto.offsetTop + 30 + "px";
-						}
+						// var toto = document.getElementById('tooltipRem');
+						// var largeur = top.innerWidth;
+						// console.log(toto.offsetLeft)
+						// if (toto.offsetLeft > largeur / 2) {
+						// 	toto.style.left = toto.offsetLeft *0.55+ "px";
+						// 	toto.style.top = toto.offsetTop + "px";
+						// }
+						// else {
+						// 	toto.style.left = toto.offsetLeft + 24 + "px";
+						// 	toto.style.top = toto.offsetTop + 30 + "px";
+						// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -621,7 +650,7 @@ function LaRepubliqueEnMarche() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('id', 'tooltipRem')
+			.attr('id', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -690,20 +719,20 @@ function LesRepublicains() {
 					.html('<span class="tooltiptitre">' + d.properties.name + '</span><br/>'
 						+ '<span>Score : ' + d.properties.LRExp + '%</span>')
 
-						.style('left', d3.event.pageX - 28 + 'px')
-						.style('top', d3.event.pageY - 28 + 'px');
+						.style('left', d3.event.pageX + 'px')
+					.style('top', d3.event.pageY - 28 + 'px');
 						
-						var toto = document.getElementById('tooltipLR');
-						var largeur = top.innerWidth;
-						console.log(toto.offsetLeft)
-						if (toto.offsetLeft > largeur / 2) {
-							toto.style.left = toto.offsetLeft *0.55+ "px";
-							toto.style.top = toto.offsetTop + "px";
-						}
-						else {
-							toto.style.left = toto.offsetLeft + 24 + "px";
-							toto.style.top = toto.offsetTop + 30 + "px";
-						}
+						// var toto = document.getElementById('tooltipLR');
+						// var largeur = top.innerWidth;
+						// console.log(toto.offsetLeft)
+						// if (toto.offsetLeft > largeur / 2) {
+						// 	toto.style.left = toto.offsetLeft *0.55+ "px";
+						// 	toto.style.top = toto.offsetTop + "px";
+						// }
+						// else {
+						// 	toto.style.left = toto.offsetLeft + 24 + "px";
+						// 	toto.style.top = toto.offsetTop + 30 + "px";
+						// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -762,7 +791,7 @@ function LesRepublicains() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('id', 'tooltipLR')
+			.attr('id', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -831,20 +860,20 @@ function EuropeEcologie() {
 					.html('<span class="tooltiptitre">' + d.properties.name + '</span><br/>'
 						+ '<span>Score : ' + d.properties.EEVExp + '%</span>')
 
-						.style('left', d3.event.pageX - 28 + 'px')
-						.style('top', d3.event.pageY - 28 + 'px');
+						.style('left', d3.event.pageX + 'px')
+					.style('top', d3.event.pageY - 28 + 'px');
 						
-						var toto = document.getElementById('tooltipEELV');
-						var largeur = top.innerWidth;
-						console.log(toto.offsetLeft)
-						if (toto.offsetLeft > largeur / 2) {
-							toto.style.left = toto.offsetLeft *0.55+ "px";
-							toto.style.top = toto.offsetTop + "px";
-						}
-						else {
-							toto.style.left = toto.offsetLeft + 24 + "px";
-							toto.style.top = toto.offsetTop + 30 + "px";
-						}
+						// var toto = document.getElementById('tooltipEELV');
+						// var largeur = top.innerWidth;
+						// console.log(toto.offsetLeft)
+						// if (toto.offsetLeft > largeur / 2) {
+						// 	toto.style.left = toto.offsetLeft *0.55+ "px";
+						// 	toto.style.top = toto.offsetTop + "px";
+						// }
+						// else {
+						// 	toto.style.left = toto.offsetLeft + 24 + "px";
+						// 	toto.style.top = toto.offsetTop + 30 + "px";
+						// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -903,7 +932,7 @@ function EuropeEcologie() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('id', 'tooltipEELV')
+			.attr('id', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -972,20 +1001,20 @@ function FranceInsoumise() {
 					.html('<span class="tooltiptitre">' + d.properties.name + '</span><br/>'
 						+ '<span>Score : ' + d.properties.FIExp + '%</span>')
 
-						.style('left', d3.event.pageX - 28 + 'px')
-						.style('top', d3.event.pageY - 28 + 'px');
+						.style('left', d3.event.pageX + 'px')
+					.style('top', d3.event.pageY - 28 + 'px');
 						
-						var toto = document.getElementById('tooltipLFI');
-						var largeur = top.innerWidth;
-						console.log(toto.offsetLeft)
-						if (toto.offsetLeft > largeur / 2) {
-							toto.style.left = toto.offsetLeft *0.55+ "px";
-							toto.style.top = toto.offsetTop + "px";
-						}
-						else {
-							toto.style.left = toto.offsetLeft + 24 + "px";
-							toto.style.top = toto.offsetTop + 30 + "px";
-						}
+						// var toto = document.getElementById('tooltipLFI');
+						// var largeur = top.innerWidth;
+						// console.log(toto.offsetLeft)
+						// if (toto.offsetLeft > largeur / 2) {
+						// 	toto.style.left = toto.offsetLeft *0.55+ "px";
+						// 	toto.style.top = toto.offsetTop + "px";
+						// }
+						// else {
+						// 	toto.style.left = toto.offsetLeft + 24 + "px";
+						// 	toto.style.top = toto.offsetTop + 30 + "px";
+						// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -1044,7 +1073,7 @@ function FranceInsoumise() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('ID', 'tooltipLFI')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -1113,20 +1142,20 @@ function PartiSocialiste() {
 					.html('<span class="tooltiptitre">' + d.properties.name + '</span><br/>'
 						+ '<span>Score : ' + d.properties.PSExp + '%</span>')
 
-						.style('left', d3.event.pageX - 28 + 'px')
-						.style('top', d3.event.pageY - 28 + 'px');
+						.style('left', d3.event.pageX + 'px')
+					.style('top', d3.event.pageY - 28 + 'px');
 						
-						var toto = document.getElementById('tooltipPS');
-						var largeur = top.innerWidth;
-						console.log(toto.offsetLeft)
-						if (toto.offsetLeft > largeur / 2) {
-							toto.style.left = toto.offsetLeft *0.55+ "px";
-							toto.style.top = toto.offsetTop + "px";
-						}
-						else {
-							toto.style.left = toto.offsetLeft + 24 + "px";
-							toto.style.top = toto.offsetTop + 30 + "px";
-						}
+						// var toto = document.getElementById('tooltipPS');
+						// var largeur = top.innerWidth;
+						// console.log(toto.offsetLeft)
+						// if (toto.offsetLeft > largeur / 2) {
+						// 	toto.style.left = toto.offsetLeft *0.55+ "px";
+						// 	toto.style.top = toto.offsetTop + "px";
+						// }
+						// else {
+						// 	toto.style.left = toto.offsetLeft + 24 + "px";
+						// 	toto.style.top = toto.offsetTop + 30 + "px";
+						// }
 			})
 			.on('mouseout', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', false)
@@ -1185,7 +1214,7 @@ function PartiSocialiste() {
 		const div = d3
 			.select('body')
 			.append('div')
-			.attr('ID', 'tooltipPS')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 

@@ -27,6 +27,42 @@
 	echo '<br/>
 		<div id="departement" style="">
 			<svg id="entete" viewBox="0 0 640 575">
+			<defs>
+             <pattern id="hach_griseClaire" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#c8c8c8" stroke-width="6" />
+                    </pattern>       
+			<pattern id="hach_grise" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#333333" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_bleuemarine" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#14387F" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_bleue" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#0091D8" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_bleueclaire" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke=#0091D8" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_verte" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="##AFCA0B" stroke-width="6" />
+                    </pattern>
+                    </pattern>
+                    <pattern id="hach_rose" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#ed6ea7" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_orange" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#FBBA00" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_rouge" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#B51F1F" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_violette" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#B60F80" stroke-width="6" />
+                    </pattern>
+                    <pattern id="hach_marron" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                      <line x1="6" y1="0" x2="6" y2="50" stroke="#654519" stroke-width="6" />
+                    </pattern>
+                  </defs>
 			</svg>
 		</div>
 	<br>

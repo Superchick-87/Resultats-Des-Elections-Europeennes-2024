@@ -81,41 +81,63 @@ div.tooltip {
 /*.code0{
 	background-color:white;
 }*/
+.orange{background:#FBBA00;fill:#FBBA00;}
+.hach_orange{fill : url(#hach_orange);stroke: white;}
+.hach_rose{fill : url(#hach_rose);stroke: white;}
+.hach_verte{fill : url(#hach_verte);stroke: white;}
+.hach_bleueclaire{fill : url(#hach_bleueclaire);stroke: white;}
+.hach_grise{fill : url(#hach_grise);stroke: white;}
+.hach_griseClaire{fill : url(#hach_griseClaire);stroke: white;}
 
+.none{
+	fill: none;
+	stroke: none;
+}
+.blue{
+	fill : blue;
+}
 .code3 {
 	background-color: #333333;
 }
 
 .code4 {
 	background-color: #B51F1F;
+	fill: #B51F1F;
 }
 
 .code5 {
 	background-color: #333333;
+	fill: #333333;
 }
 
 .code6 {
 	background-color: #AFCA0B;
+	fill: #AFCA0B;
 }
 
 .code11 {
 	background-color: #FBBA00;
+	fill: #FBBA00;
 }
 
 .code18 {
 	background-color: #0091D8;
+	fill: #0091D8;
 }
 
 .code27 {
 	background-color: #ED6EA7;
+	fill: #ED6EA7;
 }
 
 .code33 {
 	background-color: #B51F1F;
+	fill: #B51F1F;
 }
 
 .code50 {
 	background-color: #c8c8c8;
+	fill: #c8c8c8;
 }
 
 .tooltipinfosupp {

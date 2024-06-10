@@ -67,6 +67,23 @@ function entete() {
 			.on("zoom", zoomed);
 
 		//CARTE
+		function egual(x, y,z,a) {
+			if (x == y & (z == 5 && a == 11)) {
+				return 'hach_orange';
+			}
+			if (x == y & (z == 5 && a == 27)) {
+				return 'hach_rose';
+			}
+			if (x == y & (z == 4 && a == 5)) {
+				return 'hach_grise';
+			}
+			// if (x == y ) {
+			// 	return 'blue';
+			// }
+			else{
+				return 'none'
+			}
+		}
 		var carte = d3.select('svg#entete')
 			.append('g')
 			.attr('id', 'carte')
@@ -77,6 +94,18 @@ function entete() {
 			.attr('d', geoPath)
 			.attr('cursor', 'pointer')
 			.style('fill', d => areaScale(d.properties.Code1))
+			// var carte2 = d3.select('svg#entete')
+			// .append('g')
+			// .attr('id', 'carte')
+			// .selectAll('path')
+			// .data(data.features)
+			// .enter()
+			// .append('path')
+			// .attr('d', geoPath)
+			// .attr('cursor', 'pointer')
+			// .attr('class',d =>  egual(d.properties.Pourcentage1,d.properties.Pourcentage2,d.properties.Code1,d.properties.Code2))
+			// // .style('fill', d => areaScale(d.properties.Code1,d.properties.Code2))
+		
 			.on('mouseover', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', true)
 				div
@@ -119,7 +148,7 @@ function entete() {
 					.style('opacity', 0);
 			})
 
-		svg.call(zoom);
+		// svg.call(zoom);
 		function zoomed() {
 			carte.attr("transform", d3.event.transform);
 			// gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
@@ -316,9 +345,10 @@ function Labstention() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -445,9 +475,10 @@ function RassemblementNational() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -573,9 +604,10 @@ function LaRepubliqueEnMarche() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -701,9 +733,10 @@ function LesRepublicains() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -829,9 +862,10 @@ function EuropeEcologie() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -957,9 +991,10 @@ function FranceInsoumise() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -1085,9 +1120,10 @@ function PartiSocialiste() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 

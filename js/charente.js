@@ -118,7 +118,7 @@ function entete() {
 					.style('opacity', 0);
 			})
 
-		svg.call(zoom);
+		// svg.call(zoom);
 		function zoomed() {
 			carte.attr("transform", d3.event.transform);
 			// gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
@@ -315,9 +315,10 @@ function Labstention() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -444,9 +445,10 @@ function RassemblementNational() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -572,9 +574,10 @@ function LaRepubliqueEnMarche() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -700,9 +703,10 @@ function LesRepublicains() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -828,9 +832,10 @@ function EuropeEcologie() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -956,9 +961,10 @@ function FranceInsoumise() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -1084,9 +1090,10 @@ function PartiSocialiste() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 

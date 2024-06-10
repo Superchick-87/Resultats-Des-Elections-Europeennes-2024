@@ -67,6 +67,25 @@ function entete() {
 			.on("zoom", zoomed);
 
 		//CARTE
+		function egual(x, y,z,a) {
+			if (x === y & (z === 5 && a === 11)) {
+				return 'hach_orange';
+			}
+			// if (y === x & (z === 5 && a === 11)) {
+			// 	return 'hach_grise';
+			// }
+			if (x === y & (z === 5 && a === 27)) {
+				return 'hach_rose';
+			}
+			if (x == y ) {
+				return 'blue';
+			}
+			else{
+				return 'code'+z;
+			}
+		}
+		
+			
 		var carte = d3.select('svg#entete')
 			.append('g')
 			.attr('id', 'carte')
@@ -77,6 +96,19 @@ function entete() {
 			.attr('d', geoPath)
 			.attr('cursor', 'pointer')
 			.style('fill', d => areaScale(d.properties.Code1))
+
+			// var carte2 = d3.select('svg#entete')
+			// .append('g')
+			// // .attr('id', 'carte2')
+			// .selectAll('path')
+			// .data(data.features)
+			// .enter()
+			// .append('path')
+			// .attr('d', geoPath)
+			// .attr('cursor', 'pointer')
+			// .attr('class',d =>  egual(d.properties.Pourcentage1,d.properties.Pourcentage2,d.properties.Code1,d.properties.Code2))
+			
+			
 			.on('mouseover', (d, i, nodes) => {
 				d3.select(nodes[i]).classed('visu2', true)
 				div
@@ -118,8 +150,9 @@ function entete() {
 					.duration(500)
 					.style('opacity', 0);
 			})
+			
 
-		svg.call(zoom);
+		// svg.call(zoom);
 		function zoomed() {
 			carte.attr("transform", d3.event.transform);
 			// gX.call(xAxis.scale(d3.event.transform.rescaleX(x)));
@@ -157,10 +190,15 @@ function entete() {
 			.on('click', changeParti3)
 
 		function changeParti1() {
+			
+			
 			carte
-				.transition()
-				.duration(300)
-				.style('fill', d => areaScale(d.properties.Code1))
+			.transition()
+			.duration(300)
+			.style('fill', d => areaScale(d.properties.Code1))
+			// carte2
+			// .attr('class',d =>  egual(d.properties.Pourcentage1,d.properties.Pourcentage2,d.properties.Code1,d.properties.Code2));
+
 			d3.select('#button1')
 				.style('opacity', 0.5)
 			d3.select('#button2')
@@ -168,12 +206,15 @@ function entete() {
 			d3.select('#button3')
 				.style('opacity', 1)
 		}
-
+	
 		function changeParti2() {
 			carte
 				.transition()
 				.duration(300)
 				.style('fill', d => areaScale(d.properties.Code2))
+				// carte2
+				// .attr('class',d =>  egual(d.properties.Pourcentage2,d.properties.Pourcentage1,d.properties.Code1,d.properties.Code2))
+			
 			d3.select('#button1')
 				.style('opacity', 1)
 			d3.select('#button2')
@@ -187,6 +228,9 @@ function entete() {
 				.transition()
 				.duration(300)
 				.style('fill', d => areaScale(d.properties.Code3))
+			
+			
+			// .attr('class',d =>  egual(d.properties.Pourcentage2,d.properties.Pourcentage3,d.properties.Code2,d.properties.Code3))
 			d3.select('#button1')
 				.style('opacity', 1)
 			d3.select('#button2')
@@ -316,9 +360,10 @@ function Labstention() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -445,9 +490,10 @@ function RassemblementNational() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -573,9 +619,10 @@ function LaRepubliqueEnMarche() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -701,9 +748,10 @@ function LesRepublicains() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -829,9 +877,10 @@ function EuropeEcologie() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -957,9 +1006,10 @@ function FranceInsoumise() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
@@ -1085,9 +1135,10 @@ function PartiSocialiste() {
 			.attr("fill", d => colors(d));
 
 		// TOOL TIPS
-		const div = d3
+	const div = d3
 			.select('body')
 			.append('div')
+			.attr('ID', 'tooltip')
 			.attr('class', 'tooltip')
 			.style('opacity', 0);
 
