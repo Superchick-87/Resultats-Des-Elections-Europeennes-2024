@@ -362,8 +362,8 @@ function RassemblementNational() {
 		console.log(min, max)
 
 		var areaScale = d3.scaleLinear()
-			.domain([min * 1.3, max])
-			.range(['white', '#333333']);
+			.domain([min * 1.3,  max])
+			.range(['white','#000000']);
 		//CARTE
 		d3.select('svg#RassemblementNational')
 			.attr("preserveAspectRatio", "xMinYMin meet")

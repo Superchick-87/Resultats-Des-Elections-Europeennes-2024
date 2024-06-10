@@ -54,9 +54,8 @@ function entete() {
 		// console.log(data)
 
 		var areaScale = d3.scaleQuantile()
-			.domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37])
-			.range(["#333333", "#B51F1F", "#333333", "#AFCA0B", "#FBBA00", "#0091D8", "#ED6EA7", "#B51F1F", "#c8c8c8"]);
-
+		.domain([3, 4, 5, 6, 11, 18, 27, 33, 50])
+		.range(["#333333", "#B51F1F", "#333333", "#AFCA0B", "#FBBA00", "#0091D8", "#ED6EA7", "#B51F1F", "#c8c8c8"]);
 		var svg = d3.select("svg"),
 			width = +svg.attr("width"),
 			height = +svg.attr("height");
@@ -362,8 +361,8 @@ function RassemblementNational() {
 		console.log(min, max)
 
 		var areaScale = d3.scaleLinear()
-			.domain([min * 1.3, max])
-			.range(['white', '#333333']);
+			.domain([min * 1.3,  max])
+			.range(['white','#000000']);
 		//CARTE
 		d3.select('svg#RassemblementNational')
 			.attr("preserveAspectRatio", "xMinYMin meet")
