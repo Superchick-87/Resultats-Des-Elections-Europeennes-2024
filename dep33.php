@@ -73,43 +73,43 @@
 	<div class="flex">
 		<div id="dept' . ddc($phrasesDeps[0][0]) . '" class="PetitesCartes">
 			<h3>' . $phrasesDeps[0][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][1], 1, ',', '') . '%</p>
+			<p class="chiffre">' . number_format($chiffresDeps[3][1], 1, ',', '') . '%</p>
 			<p class="introcartes">' . $phrasesDeps[0][1] . '</p>
 			<svg id="' . ddc($phrasesDeps[0][0]) . '"></svg>
 		</div>		
 		<div id="dept' . ddc($phrasesDeps[1][0]) . '" class="PetitesCartes">
 			<h3>' . $phrasesDeps[1][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][2], 1, ',', '') . '%</p>
+			<p class="chiffre">' . number_format($chiffresDeps[3][2], 1, ',', '') . '%</p>
 			<p class="introcartes">' . $phrasesDeps[1][1] . '</p>
 			<svg id="' . ddc($phrasesDeps[1][0]) . '"></svg>
 		</div>
 		<div id="dept' . ddc($phrasesDeps[2][0]) . '" class="PetitesCartes">
-			<h3>' . $phrasesDeps[2][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][3], 1, ',', '') . '%</p>
-			<p class="introcartes">' . $phrasesDeps[2][1] . '</p>
-			<svg id="' . ddc($phrasesDeps[2][0]) . '"></svg>
+		<h3>' . $phrasesDeps[2][0] . '</h3>
+		<p class="chiffre">' . number_format($chiffresDeps[3][3], 1, ',', '') . '%</p>
+		<p class="introcartes">' . $phrasesDeps[2][1] . '</p>
+		<svg id="' . ddc($phrasesDeps[2][0]) . '"></svg>
 		</div>		
 		<div id="dept' . ddc($phrasesDeps[3][0]) . '" class="PetitesCartes">
-			<h3>' . $phrasesDeps[3][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][4], 1, ',', '') . '%</p>
-			<p class="introcartes">' . $phrasesDeps[3][1] . '</p>
-			<svg id="' . ddc($phrasesDeps[3][0]) . '"></svg>			
+		<h3>' . $phrasesDeps[3][0] . '</h3>
+		<p class="chiffre">' . number_format($chiffresDeps[3][4], 1, ',', '') . '%</p>
+		<p class="introcartes">' . $phrasesDeps[3][1] . '</p>
+		<svg id="' . ddc($phrasesDeps[3][0]) . '"></svg>			
 		</div>
 		<div id="dept' . ddc($phrasesDeps[4][0]) . '" class="PetitesCartes">
-			<h3>' . $phrasesDeps[4][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][5], 1, ',', '') . '%</p>
-			<p class="introcartes">' . $phrasesDeps[4][1] . '</p>
-			<svg id="' . ddc($phrasesDeps[4][0]) . '"></svg>
+		<h3>' . $phrasesDeps[4][0] . '</h3>
+		<p class="chiffre">' . number_format($chiffresDeps[3][5], 1, ',', '') . '%</p>
+		<p class="introcartes">' . $phrasesDeps[4][1] . '</p>
+		<svg id="' . ddc($phrasesDeps[4][0]) . '"></svg>
 		</div>		
 		<div id="dept' . ddc($phrasesDeps[5][0]) . '" class="PetitesCartes">
-			<h3>' . $phrasesDeps[5][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][6], 1, ',', '') . '%</p>
-			<p class="introcartes">' . $phrasesDeps[5][1] . '</p>
-			<svg id="' . ddc($phrasesDeps[5][0]) . '"></svg>			
+		<h3>' . $phrasesDeps[5][0] . '</h3>
+		<p class="chiffre">' . number_format($chiffresDeps[3][6], 1, ',', '') . '%</p>
+		<p class="introcartes">' . $phrasesDeps[5][1] . '</p>
+		<svg id="' . ddc($phrasesDeps[5][0]) . '"></svg>			
 		</div>
 		<div id="dept' . ddc($phrasesDeps[6][0]) . '" class="PetitesCartes">
 			<h3>' . $phrasesDeps[6][0] . '</h3>
-			<p class="chiffre">' . number_format($chiffresDeps[2][7], 1, ',', '') . '%</p>
+			<p class="chiffre">' . number_format($chiffresDeps[3][7], 1, ',', '') . '%</p>
 			<p class="introcartes">' . $phrasesDeps[6][1] . '</p>
 			<svg id="' . ddc($phrasesDeps[6][0]) . '"></svg>			
 		</div>
